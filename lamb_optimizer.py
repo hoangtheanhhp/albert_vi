@@ -30,7 +30,7 @@ from tensorflow.python.ops import math_ops
 # pylint: enable=g-direct-tensorflow-import
 
 
-class LAMBOptimizer(tf.train.Optimizer):
+class LAMBOptimizer(tf.compat.v1.train.Optimizer):
   """LAMB (Layer-wise Adaptive Moments optimizer for Batch training)."""
   # A new optimizer that includes correct L2 weight decay, adaptive
   # element-wise updating, and layer-wise justification. The LAMB optimizer

@@ -47,7 +47,7 @@ FLAGS = flags.FLAGS
 
 ## Required parameters
 flags.DEFINE_string(
-    "albert_config_file", None,
+    "albert_config_file", "config/base/albert_config.json",
     "The config json file corresponding to the pre-trained ALBERT model. "
     "This specifies the model architecture.")
 
@@ -1324,7 +1324,5 @@ def main(_):
 
 
 if __name__ == "__main__":
-  flags.mark_flag_as_required("vocab_file")
-  flags.mark_flag_as_required("albert_config_file")
-  flags.mark_flag_as_required("output_dir")
-  tf.app.run()
+
+  tf.compat.v1.app.run()
